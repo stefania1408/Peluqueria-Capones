@@ -15,8 +15,8 @@ public class IndexController {
     @GetMapping({ "/hola", "/", "" })
     public ModelAndView index(ModelAndView map) {
 
-        map.addObject("mensaje", "Este es un mansaje muy especial para ti !!!");
-        map.addObject("titulo", "El titulo si se puede cambiar");
+        map.addObject("mensaje", "Te tenemos muchos regalos preparados!!!");
+        map.addObject("titulo", "Bienvenidos a su peluqueria!!!");
         map.setViewName("index");
 
         return map;
@@ -28,7 +28,8 @@ public class IndexController {
         Usuario usuario = new Usuario();
         usuario.setNombre("Nicolas");
         usuario.setApellido("Ruiz");
-        model.addAttribute("usuario", usuario.getNombre());
+        model.addAttribute("titulo", "Bienvenido: " + usuario.getNombre());
+        model.addAttribute("usuario", usuario);
         return "perfil";
 
     }
