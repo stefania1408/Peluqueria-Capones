@@ -30,5 +30,6 @@ public class IndexController {
         usuario.setApellido("Ruiz");
         model.addAttribute("usuario", usuario.getNombre());
         return "perfil";
+
     }
 }
